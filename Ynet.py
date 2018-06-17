@@ -1,5 +1,7 @@
-import feedparser, os, pdb
-from yattag import Doc,indent
+import feedparser
+import os
+import pdb
+from yattag import Doc, indent
 from lxml import html
 import requests
 
@@ -10,7 +12,6 @@ d = feedparser.parse(rss)
 
 #Title of Service
 print d['feed']['title']
-
 
 
 ##Basic HTML template
