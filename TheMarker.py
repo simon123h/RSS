@@ -1,7 +1,26 @@
-﻿import feedparser, os, pdb
-from yattag import Doc,indent
-from lxml import html
-import requests
+
+import os
+import pdb
+try:
+    import feedparser
+except ImportError:
+    print("Error: FeedParser not installed\nInstall using: pip install feedparser")
+    exit()
+try:
+    from yattag import Doc, indent
+except ImportError:
+    print("Error: yattag not installed\nInstall using: pip install yattag")
+    exit()
+try:
+    from lxml import html
+except ImportError:
+    print("Error: lxml not installed\nInstall using: pip install lxml")
+    exit()
+try:
+    import requests
+except ImportError:
+    print("Error: requests not installed\nInstall using: pip install requests")
+    exit()
 
 rss = raw_input("""Enter your preferred feed:
 1 - כל פרשנויות היום
