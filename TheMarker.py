@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
+from builtins import input
 import os
 import pdb
 try:
@@ -27,7 +29,7 @@ except ImportError:
     print("Install using: pip install requests")
     exit()
 
-rss = raw_input("""Enter your preferred feed:
+rss = input("""Enter your preferred feed:
 1 - כל פרשנויות היום
 2 - כל כותרות היום
 3 - כותרות דף הבית
@@ -40,12 +42,12 @@ elif rss == "2":
 else:
     themarker = "http://www.themarker.com/cmlink/1.145"
 
-# print themarker
+# print(themarker)
 
 d = feedparser.parse(themarker)
 
 # Title of Service
-# print d['feed']['title']
+# print(d['feed']['title'])
 
 # # Basic HTML template
 doc, tag, text = Doc().tagtext()
@@ -96,4 +98,4 @@ Html_file.close()
 
 os.startfile(Html_file.name, 'open')
 
-# print "DONE"
+# print("DONE")
